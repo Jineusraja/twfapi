@@ -7,7 +7,7 @@ exports.calculateDeliveryCost = (req, res) => {
 
   try {
     const cost = calculateCost(req.body);
-    res.json({ success: true, cost });
+    res.json({cost });
   } catch (error) {
     res.status(500).json({ success: false, message: "Error calculating cost." });
   }
